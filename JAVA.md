@@ -62,10 +62,21 @@ System.out.println("Hello World!");
 ### 1. `int`
 
 - 정수형 데이터를 저장한다.
+- -2147483648 ~ 2147483647
 
-### 2. `double`
+### 2. long
+
+- 정수형 자료형
+- -9223372036854775808 ~ 9223372036854775807
+- long 변수에는 L접미사를 붙여준다.
+
+### 3. `double`
 
 - `int` 의 범위를 넘어가는 숫자 또는 소수와 같은 실수형 데이터를 저장한다.
+
+### 4. float
+
+- `long` 과 마찬가지로 F 접미사를 붙여준다.
 
 ### 3. `boolean`
 
@@ -809,3 +820,25 @@ Location[] locations = {x, y, z};
 ### 3. Logic Errors
 
 - 출력이 원하는 답이 아닐 경우
+
+
+
+# Input 받기
+
+```java
+import java.util.Scanner;
+
+public class reverse {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+         int num = scan.nextInt();
+         double nums = scan.nextDouble();
+         String str = scan.nextLine();
+	}
+
+}
+
+```
+
