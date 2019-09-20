@@ -320,7 +320,7 @@ class Name {
     }
     public static void main(String[] args){
         Name cn = new Name();
-        System.out.println(Name);
+        System.out.println(cn);
     }
     
     public String toString(){
@@ -330,7 +330,7 @@ class Name {
 ```
 
 - `toString()` 이 없을 때, object 를 출력하면 object 의 메모리 주소가 출력된다.
-- `toStrint()` 을 사용한다면, object 의 출력 결과가 메소드의 return 값이 나온다.
+- `toString()` 을 사용한다면, object 의 출력 결과가 메소드의 return 값이 나온다.
 
 
 
