@@ -63,6 +63,7 @@ System.out.println("Hello World!");
 
 - 정수형 데이터를 저장한다.
 - -2147483648 ~ 2147483647
+- 8진수 (0으로 시작) 와 16진수 (0x 로 시작) 를 나타낼 수 있다.
 
 ### 2. long
 
@@ -91,7 +92,39 @@ System.out.println("Hello World!");
 
 - " " 를 사용하여 단어나 문장을 저장할 수 있다.
 
+### 6. StringBuffer
 
+- 문자열을 추가하거나 변경할 때 주로 사용하는 자료형
+
+- 객체 생성에는 일반 String 보다 느리고 무거우나, 변경 작업이 많을 경우에는 StringBuffer 을 사용한다.
+
+  - `append` : 문자열 추가
+  - `insert` : 원하는 위치에 문자열 삽입
+  - `substring` : String 자료형의 substring 메소드와 동일
+
+  ```java
+  public class test{
+      public static void main(String[] args) {
+          StringBuffer sb = new StringBuffer();
+          sb.append("hello");
+          sb.append(" ");
+          sb.append("World");
+          System.out.println(sb.toString());
+          // hello World
+          
+          sb.insert(0, "hh ");
+          System.out.println(sb.toString());
+          // hh hello World
+          
+          System.out.println(sb.substring(0, 4));
+          // hh h
+      }
+  }
+  ```
+
+  
+
+  
 
 # Operate
 
@@ -621,6 +654,14 @@ System.out.println(str.indexOf("e"));
 // 1
 System.out.println(str.indexOf("llo"));
 // 2 (시작지점이 l 이기 때문)
+```
+
+- `replaceAll`
+
+```java
+String str = "Hello World";
+System.out.println(str.replaceAll("World", "Java"));
+// Hello Java
 ```
 
 - `charAt()`
