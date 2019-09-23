@@ -880,6 +880,66 @@ public class reverse {
 	}
 
 }
-
 ```
+
+```java
+// Scanner 로 받을 경우 Space Enter 를 모두 경계로 인식해 데이터 가공 편리
+// BufferedReader : Enter 만 경계로 인식, 받은 데이터 String -> 가공 작업 필요 / 많은 양의 데이터 입력에 편리
+import java.io.*
+
+public class main {
+
+	public static void main(String[] args) {
+		//BufferedReader
+		// 콘솔 입력
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		// 파일 입력
+		FileReader fr = new FileReader("test.txt")
+		BufferedReader bfr = new BufferedReader(fr);
+		
+		// readLine : return 이 String 이므로 형변환 필요
+		int num = Integer.parseInt(br.readLine());
+		br.close()
+		
+		//BufferedWriter
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		//파일
+		BufferedWriter bwf = new BufferedWriter(new FileWriter("test.txt"));
+		
+		bw.write("Hello\n") // 출력
+		// 개행(Enter)
+		bw.newLine()
+		// 남은 데이터 모두 출력
+		bw.flush()
+		// close
+		bw.close()
+	}
+}
+```
+
+- **BufferedReader**
+
+| **Modifier and Type** | **Method and Description**                                   |
+| --------------------- | ------------------------------------------------------------ |
+| void                  | `Close()` : Closes the stream and releases any system resources associated with it. |
+| void                  | ` mark(int, readAheadLimit)` :  Marks the present position in the system. |
+| boolean               | ` markSupported()` : Tells whether this stream supports the mark() operation, which it does. |
+| int                   | ` read()` : Reads a single character. (정수형 반환)          |
+| int                   | ` read(char[] cbuf, int offset, int length)` :  Reads characters into a portion of an array. |
+| String                | ` readLine()` :  Reads a line of text.                       |
+| boolean               | ` ready()` :  Tells whether this stream is ready to be read. |
+| void                  | ` reset()` : Resets the stream to the most recent mark.      |
+| long                  | ` skip(long n)` : Skips characters.                          |
+
+- **BufferedWriter**
+
+| **Modifier and Type** | **Method and Description**                                   |
+| --------------------- | ------------------------------------------------------------ |
+| void                  | `close()` : Closes the stream, flushing it first.            |
+| void                  | ` flush()` : Flushes the stream.                             |
+| void                  | ` newLine()` : Writes a line separator.                      |
+| void                  | ` write(char[] cbuf, int offset, int length)`                |
+| void                  | ` write(int c)` : Writes a single character                  |
+| void                  | ` write(String s, int offset, int length)` : Writes a portion of a String |
+
 
