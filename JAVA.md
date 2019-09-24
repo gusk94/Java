@@ -86,7 +86,18 @@ System.out.println("Hello World!");
 ### 4. `char`
 
 - single quotes, 즉 ' ' 를 사용하여 저장한다.
+
 - 2 Byte 를 저장하며, 유니코드 정수 형태로 저장된다.
+
+- ```java
+  char a1 = 'a';
+  char a2 = 97;
+  char a3 = '\u0061';
+  
+  System.out.println(a1); // 문자
+  System.out.println(a2); // 아스키코드
+  System.out.println(a3); // 유니코드
+  ```
 
 ### 5. `String`
 
@@ -537,8 +548,6 @@ System.out.println(nums.indexOf(2));
 // 1
 ```
 
-
-
 # Loop
 
 - `while`
@@ -695,6 +704,29 @@ String upper = str.toUpperCase();
 String lower = str.toLowerCase();
 // lower = "hello"
 ```
+
+- `trim()`
+
+```java
+// 공백 제거(양 옆)
+String str = " abc def ";
+str = str.trim();
+System.out.println(str);
+// abc def
+```
+
+- `toCharArray()`
+
+```java
+// 문자열의 각 문자를 분해
+str = "char";
+for (char c : str.toCharArray()) {
+    System.out.println(c);
+}
+// c (\n) h (\n) a (\n) r
+```
+
+
 
 
 
@@ -864,7 +896,7 @@ Location[] locations = {x, y, z};
 
 
 
-# Input 받기
+# Input & Output
 
 ```java
 import java.util.Scanner;
@@ -881,6 +913,21 @@ public class reverse {
 
 }
 ```
+
+- `System.out.println("Hello")` : 자동 개행(ENTER) 기능 O
+
+- `System.out.print("Hello")` : 자동 개행 기능 X , `\n` 을 사용해 수동적으로 바꿔줘야함
+
+- 서식을 이용해 출력, 자동 개행 기능 X
+
+  ```java
+  String s = "Hello";
+  System.out.printf("%s", s);
+  /*
+  자릿수 정하기 : "%5s" : 문자열의 길이가 5 아래라면 남은 공간 공백 표시
+  대체 문자 넣기 : "%07d" : 정수형 서식 출력 -> 길이가 7 아래라면 "0"으로 공백 채워줌
+  */
+  ```
 
 ```java
 // Scanner 로 받을 경우 Space Enter 를 모두 경계로 인식해 데이터 가공 편리
@@ -942,4 +989,44 @@ public class main {
 | void                  | ` write(int c)` : Writes a single character                  |
 | void                  | ` write(String s, int offset, int length)` : Writes a portion of a String |
 
+```java
+// 입출력 예외처리
+import java.io.IOException
+
+public class Solution{
+	public static void main(String[] args) throws IOException {
+		
+	}
+}
+```
+
+- 문자 변환 보조 스트림
+  - ` InputStreamReaer`
+  - `OutpurStreamReader`
+
+
+
+## * StringTokenizer
+
+- String 을 token 단위로 끊어주는 클래스
+- **생성자**
+  - `StringTokenizer(String str)` : 디폴트 구획문자(\t, \n, \r, \f) 를 받아 나눠준다
+  - `StringTokenizer(String str, String delim)` : delimiter(구획문자) 를 받는다. 길이가 2이상인 구획문자를 받으면 여러 개의 구획문자를 받는 것으로 한다. 단, 같은 구획문자가 여러 개 있을 경우 하나로 취급한다.
+  - ` StringTokenizer(String str, String delim, boolean returnDelims)` : returnDelims 가 true 일 경우 구획문자도 토큰으로 받는다. 이 때는 같은 구획문자가 여러 개 있을 경우, 모든 구획문자를 받는다.
+- **매소드**
+  - `countTokens()` : 토큰이 몇 개인지 리턴
+  - `nextToken()` : 이전 토큰을 제거하고 다음 토큰을 리턴
+  - `nextToken(String delim)` : 생성자에서 정의한 구획문자를 delim으로 바꾼 후 다음 토큰을 리턴
+  - `hasMoreTokens()` : 토큰이 남아 있으면 true, 없으면 false
+
+
+
+# StringBuilder
+
+```java
+// 긴 문자열을 더할 경우 사용
+StringBuilder sb = new StringBuilder();
+sb.append("abc");
+System.out.println(sb.toString());
+```
 
