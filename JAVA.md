@@ -444,6 +444,21 @@ System.out.println(number.length);
 // 5
 ```
 
+- `sort()`
+
+```java
+import java.util.Collections;
+Arrays.sort(str); // 오름차순
+Arrays.sort(str, Collections.reverseOrder()); // 내림차순
+
+// comparator 사용 (import java.util.Comparator;)
+Arrays.sort(ns, Comparator.naturalOrder());
+Arrays.sort(ns, Comparator.reverseOrder());
+
+// int 의 경우에는 Integer 로 바꿔주어야 가능
+// Collections.sort(arraylist) 로 ArrayList 정렬도 가능
+```
+
 - `String[] args`
 
 ```java
@@ -547,6 +562,21 @@ nums.add(3);
 System.out.println(nums.indexOf(2));
 // 1
 ```
+
+- `sort()`
+
+```java
+import java.util.Comparator;
+ArrayList<Integer> n = new ArrayList<>();
+n.add(3);
+n.add(2);
+n.add(7);
+n.add(6);
+n.sort(Comparator.naturalOrder()); // n.sort(null) 과 같음
+n.sort(Comparator.reverseOrder());
+```
+
+
 
 # Loop
 
@@ -1019,8 +1049,6 @@ public class Solution{
   - `nextToken(String delim)` : 생성자에서 정의한 구획문자를 delim으로 바꾼 후 다음 토큰을 리턴
   - `hasMoreTokens()` : 토큰이 남아 있으면 true, 없으면 false
 
-
-
 # StringBuilder
 
 ```java
@@ -1029,4 +1057,203 @@ StringBuilder sb = new StringBuilder();
 sb.append("abc");
 System.out.println(sb.toString());
 ```
+
+
+
+# JAVA 형변환
+
+- int to String
+
+  ```java
+  String str = Integer.toString(i);
+  ```
+
+- String to int
+
+  ```java
+  int num = Integer.parseInt(str);
+  int num = Integer.valueOf(str).intValue();
+  ```
+
+- double to String
+
+  ```java
+  String str = Double.toString(d);
+  ```
+
+- long to String
+
+  ```java
+  String str = Long.toString(l);
+  ```
+
+- float to String
+
+  ```java
+  String str = Float.toString(f);
+  ```
+
+- String to double
+
+  ```java
+  double d = Double.valueOff(str).doubleValue();
+  ```
+
+- String to long
+
+  ```java
+  long l = Long.valueOf(str).longValue();
+  long l = Long.parseLong(str);
+  ```
+
+- String to Float
+
+  ```java
+  float f = Float.valueOf(str).floatValue();
+  ```
+
+- decimal to binary
+
+  ```java
+  String binstr = Integer.toBinaryString(i);
+  ```
+
+- decimal to hexadecimal
+
+  ```java
+  String hexstr = Integer.toString(i, 16);
+  String hexstr = Integer.toHexString(i);
+  (Integer.toHexString( 0x10000 | i).substring(1).toUpperCase());
+  ```
+
+- hexadecimal(String) to int
+
+  ```java
+  int i = Integer.valueOf("B8DA3", 16).intValue();
+  int i = Integer.parseInt("B8DA3", 16);
+  ```
+
+- ASCII Code to String
+
+  ```java
+  String asc = new Character((char) i).toString();
+  ```
+
+- Integer to ASCII Code
+
+  ```java
+  int i = (int) c; // char c;
+  ```
+
+- Integer to boolean
+
+  ```java
+  boolean b = (i != 0);
+  ```
+
+- boolean to Integer
+
+  ```java
+  int i = (b)? 1 : 0;
+  ```
+
+
+
+## * `parseInt()` 와 `valueOf()` 차이점
+
+- `parseInt()`
+
+  : int 값을 반환
+
+- `valueOf()`
+
+  : Integer 값을 반환
+
+  
+
+- **Primitive type vs Reference type**
+
+  - Primitive type : 메모리에 직접 데이터를 담음 / 기본자료형
+
+    : int, long, short, byte, float, double, char, boolean
+
+  - Reference type : 참조 주소값을 담음
+
+    : 클래스, 인터페이스, 배열, 열거
+
+- **래퍼 클래스(Wrapper)**
+
+  - 기본 자료형을 매개변수로 가짐(기본형을 객체로)
+  - Integer, Long, Short, Byte, Float, Double, Character, Boolean
+
+- AutoBoxing
+
+  : 기본형을 참조형으로
+
+- Unboxing
+
+  : 참조형을 기본형으로
+
+
+
+# Max, Min
+
+- Loop
+
+- `Collections.max()` , `Colletions.min()`
+
+  - 리스트가 비어있을 경우 `NoSuchElementException` 에러가 발생 -> 기본값 처리 필요
+
+  - 리스트 타입의 인자만 받는다.
+
+    ```java
+    int i = num.isEmpty() ? -1 : Collections.min(num);
+    ```
+
+    
+
+- `Stream().max()` , `Stream().min()`
+
+  - `Optional` 객체 리턴 : `orElse(-1) ` 을 통해서 쉽게 기본값 처리 가능
+
+    ```java
+    int i = num.stream().max(Integer::compare).orElse(-1);
+    ```
+
+
+
+## * Optional
+
+- 생성
+
+```java
+java.util.Optional<T>
+
+/*
+Optional : 'null' 이 될 수도 있는 객체 ex) Collection, Stream
+null을 직접 다룰 필요 X -> 불필요한 로직 생략
+*/
+// null (비어있는 Optional 객체)
+Optional<class> maybeclass = Optional.empty();
+// 객체를 담고 있는 Optional : null 이 넘어오면 NPE(NullPointerException) 가 나옴
+Optional<class> maybeclass = Optional.of(value);
+// null인지 아닌지 확신 x
+Optional<class> maybeclass = Optional.ofNullable(value);
+Optional<class> maybeclass = Optional.ofNullable(null); // == Optional.empty()
+```
+
+- 객체 접근
+  - 해당 객체가 있을 경우 해당 값 반환!
+  - `get()` : 비어있을 경우, `NoSuchElementException`
+  - `orElse(T other)` : 비어있을 경우, 넘어온 인자 반환
+  - `orElseGet(Supplier<? extends T> other)` : 비어있을 경우, 넘어온 함수형 인자를 통해 생성된 객체 반환 -> 비어있는 경우에만 함수 호출
+  - `orElseThrow(Supplier<? extends X> exceptionSupplier)` : 비어있을 경우, 넘어온 함수형 인자를 통해 생성된 예외
+
+
+
+## 더블콜론
+
+- `::` 
+  - 메소드 참조 연산자
+  - 람다 식과 동일한 처리 방법
 
