@@ -1,4 +1,4 @@
-package programmers;
+package programmers.level1;
 
 public class 소수찾기 {
 //    에라토스테네스의 체
