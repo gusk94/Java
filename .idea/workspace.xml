@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f62ccd7-fdea-49b2-844e-95ad6b1eabb1" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/programmers/level1/서울에서김서방찾기.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/programmers/level1/최대공약수와최소공배수.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -18,7 +18,7 @@
       <file leaf-file-name="두개뽑아서더하기.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/programmers/level1/두개뽑아서더하기.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
+            <state relative-caret-position="92">
               <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -27,12 +27,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="서울에서김서방찾기.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="서울에서김서방찾기.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/programmers/level1/서울에서김서방찾기.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="138">
-              <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="38" />
+              <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="38" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="최대공약수와최소공배수.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/programmers/level1/최대공약수와최소공배수.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="3" column="48" lean-forward="true" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
+              <folding>
+                <element signature="e#522#523#0" expanded="true" />
+                <element signature="e#573#574#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,6 +85,7 @@
         <option value="$PROJECT_DIR$/src/programmers/level1/두개뽑아서더하기.java" />
         <option value="$PROJECT_DIR$/src/programmers/level1/문자열을정수로바꾸기.java" />
         <option value="$PROJECT_DIR$/src/programmers/level1/서울에서김서방찾기.java" />
+        <option value="$PROJECT_DIR$/src/programmers/level1/최대공약수와최소공배수.java" />
       </list>
     </option>
   </component>
@@ -101,10 +115,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -149,6 +159,10 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -169,7 +183,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.서울에서김서방찾기">
+  <component name="RunManager" selected="Application.최대공약수와최소공배수">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -185,6 +199,25 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="programmers.hash.완주하지못한선수" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Java" />
+      <envs />
+    </configuration>
+    <configuration name="최대공약수와최소공배수" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="programmers.level1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="programmers.level1.최대공약수와최소공배수" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -408,11 +441,11 @@
       <item index="1" class="java.lang.String" itemvalue="Application.coutnpandy" />
       <item index="2" class="java.lang.String" itemvalue="Application.middle_char" />
       <item index="3" class="java.lang.String" itemvalue="Application.divisor" />
-      <item index="4" class="java.lang.String" itemvalue="Application.서울에서김서방찾기" />
+      <item index="4" class="java.lang.String" itemvalue="Application.최대공약수와최소공배수" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.서울에서김서방찾기" />
+        <item index="0" class="java.lang.String" itemvalue="Application.최대공약수와최소공배수" />
         <item index="1" class="java.lang.String" itemvalue="Application.divisor" />
         <item index="2" class="java.lang.String" itemvalue="Application.middle_char" />
         <item index="3" class="java.lang.String" itemvalue="Application.coutnpandy" />
@@ -443,11 +476,12 @@
       <workItem from="1603708092089" duration="385000" />
       <workItem from="1603784687120" duration="1248000" />
       <workItem from="1603889139576" duration="725000" />
+      <workItem from="1603946200449" duration="429000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13206000" />
+    <option name="totallyTimeSpent" value="13635000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="950" y="0" width="979" height="1048" extended-state="0" />
@@ -496,18 +530,30 @@
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/programmers/level1/서울에서김서방찾기.java</url>
-          <line>5</line>
-          <properties />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
       </breakpoints>
       <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/programmers/level1/두개뽑아서더하기.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/programmers/level1/서울에서김서방찾기.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/programmers/level1/두개뽑아서더하기.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -737,7 +783,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/programmers/level1/두개뽑아서더하기.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
+        <state relative-caret-position="92">
           <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -745,19 +791,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/programmers/level1/문자열을정수로바꾸기.java">
+    <entry file="file://$PROJECT_DIR$/src/programmers/level1/문자열을정수로바꾸기.java" />
+    <entry file="file://$PROJECT_DIR$/src/programmers/level1/서울에서김서방찾기.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
-          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/programmers/level1/서울에서김서방찾기.java">
+    <entry file="file://$PROJECT_DIR$/src/programmers/level1/최대공약수와최소공배수.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="38" />
-          <folding />
+        <state relative-caret-position="69">
+          <caret line="3" column="48" lean-forward="true" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
+          <folding>
+            <element signature="e#522#523#0" expanded="true" />
+            <element signature="e#573#574#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
