@@ -1,3 +1,5 @@
+package d1;
+
 import java.io.*;
 
 public class plus2 {
