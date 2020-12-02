@@ -18,7 +18,7 @@ public class HelloWorld {
 ### 2. Comment
 
 ```java
-// single line comment
+// 한 줄의 주석
 ```
 
 ```java
@@ -31,7 +31,7 @@ public class HelloWorld {
 
 ```java
 public class HelloWorld { 
-  // class code
+  
 }
 ```
 
