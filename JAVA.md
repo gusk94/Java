@@ -1,14 +1,12 @@
 ## JAVA 프로그램
 
 ```java
-// This program outputs the message "Hello World!" to the monitor
 
 public class HelloWorld {
   public static void main(String[] args) {
     System.out.println("Hello World!");
   }
 }
-// print Hello, World!
 ```
 
 
@@ -20,7 +18,7 @@ public class HelloWorld {
 ### 2. Comment
 
 ```java
-// single line comment
+// 한 줄의 주석
 ```
 
 ```java
@@ -33,7 +31,7 @@ public class HelloWorld {
 
 ```java
 public class HelloWorld { 
-  // class code
+  
 }
 ```
 
@@ -257,7 +255,7 @@ switch (varaible) {
 
 ```java
 if (true && false) {
-  System.out.println("can't print");
+  System.out.println("can't d1.print");
 } else if (true && true) {
   System.out.println("hi");
 }
@@ -280,7 +278,7 @@ false && false
 
 ```java
 if (false || false) {
-  System.out.println("can't print");
+  System.out.println("can't d1.print");
 } else if (false || true) {
   System.out.println("hi");
 }
@@ -595,7 +593,7 @@ while (condition) {
 int num = 0;
 
 while (num < 5){
-    System.out.println("print");
+    System.out.println("d1.print");
     num++;
 }
 ```
@@ -911,7 +909,7 @@ Location[] locations = {x, y, z};
     // code
   
   } catch (ArithmeticException e) {
-    // print error message
+    // d1.print error message
     System.err.println("ArithmeticException: " + e.getMessage());
       
     // code
@@ -931,7 +929,7 @@ Location[] locations = {x, y, z};
 ```java
 import java.util.Scanner;
 
-public class reverse {
+public class d1.reverse {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -946,7 +944,7 @@ public class reverse {
 
 - `System.out.println("Hello")` : 자동 개행(ENTER) 기능 O
 
-- `System.out.print("Hello")` : 자동 개행 기능 X , `\n` 을 사용해 수동적으로 바꿔줘야함
+- `System.out.d1.print("Hello")` : 자동 개행 기능 X , `\n` 을 사용해 수동적으로 바꿔줘야함
 
 - 서식을 이용해 출력, 자동 개행 기능 X
 

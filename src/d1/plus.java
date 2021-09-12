@@ -1,14 +1,17 @@
+package d1;
+
 import java.util.Scanner;
 
-public class stamp {
+public class plus {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int num = scan.nextInt();
-		for (int i=0;i<num;i++) {
-			System.out.print('#');
+		int x = 0;
+		for (int i=1;i<=num;i++) {
+			x += i;
 		}
-
+		System.out.println(x);
 	}
 
 }
